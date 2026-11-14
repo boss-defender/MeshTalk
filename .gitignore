@@ -1,0 +1,42 @@
+# ---- Node / Electron (linux/) ----
+node_modules/
+linux/out/
+linux/release/
+linux/build/
+linux/*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+
+# ---- Android / Gradle (android/) ----
+.gradle/
+android/.gradle/
+android/.kotlin/
+android/build/
+android/app/build/
+android/local.properties
+android/captures/
+*.iml
+.idea/
+.kotlin/
+
+# ---- Reverse-engineering scratch (keep out of the public repo) ----
+work/
+tmp/
+next.txt
+instruction.txt
+
+# ---- Original APK under study (third-party; do not redistribute) ----
+/base.apk
+/wifi-walkie-talkie.apk
+
+# ---- The Linux AppImage is ~114 MB, over GitHub's 100 MB plain-git limit.
+# Attach it to a GitHub Release instead (recommended), or track it with Git LFS:
+#   git lfs install && git lfs track "*.AppImage"
+# then delete the line below so it is committed through LFS.
+releases/*.AppImage
+
+# ---- OS / editor noise ----
+.DS_Store
+Thumbs.db
+*.swp
+*~

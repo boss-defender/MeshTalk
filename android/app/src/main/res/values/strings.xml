@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MeshTalk</string>
+    <string name="service_channel_name">Walkie-Talkie Mesh</string>
+    <string name="service_channel_description">Local Wi-Fi mesh listener and push-to-talk service</string>
+</resources>
