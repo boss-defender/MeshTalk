@@ -35,6 +35,9 @@ instruction.txt
 # then delete the line below so it is committed through LFS.
 releases/*.AppImage
 
+# ---- Helper script for the maintainer (not part of the project) ----
+/upload.sh
+
 # ---- OS / editor noise ----
 .DS_Store
 Thumbs.db

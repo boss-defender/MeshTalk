@@ -157,5 +157,5 @@ If peers and text chat work but **audio is silent**:
 
 This is an educational reconstruction. The original APK — its strings, colors and wire
 protocol — belongs to its respective authors. No code from the APK was copied verbatim; the
-Android and Linux implementations were rewritten from observed behavior. See
-[`README`](README.md) history and the individual sub-project READMEs for build specifics.
+Android and Linux implementations were rewritten from observed behavior. Build specifics are
+in [`android/README.md`](android/README.md) and [`linux/README.md`](linux/README.md).
