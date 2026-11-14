@@ -29,11 +29,9 @@ instruction.txt
 /base.apk
 /wifi-walkie-talkie.apk
 
-# ---- The Linux AppImage is ~114 MB, over GitHub's 100 MB plain-git limit.
-# Attach it to a GitHub Release instead (recommended), or track it with Git LFS:
-#   git lfs install && git lfs track "*.AppImage"
-# then delete the line below so it is committed through LFS.
-releases/*.AppImage
+# ---- The ~114 MB Linux AppImage is stored with Git LFS (see .gitattributes),
+# because GitHub rejects files over 100 MB in normal Git. It is also attached to
+# the Releases page for direct download.
 
 # ---- Helper script for the maintainer (not part of the project) ----
 /upload.sh
