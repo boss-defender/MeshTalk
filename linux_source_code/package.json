@@ -1,0 +1,68 @@
+{
+  "name": "meshtalk-linux",
+  "version": "1.0.0",
+  "description": "MeshTalk — LAN-only Wi-Fi walkie-talkie, chat, file transfer and calls",
+  "main": "./out/main/index.js",
+  "author": "MeshTalk Port",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "electron-vite dev",
+    "start": "electron-vite preview",
+    "build": "electron-vite build",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json",
+    "dist": "npm run build && electron-builder --linux AppImage",
+    "pack": "npm run build && electron-builder --dir"
+  },
+  "dependencies": {
+    "bonjour-service": "^1.3.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^3.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "build": {
+    "appId": "com.example.meshtalk",
+    "productName": "MeshTalk",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "out/**/*",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "main": "./out/main/index.js"
+    },
+    "asarUnpack": [
+      "node_modules/bonjour-service/**"
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "AudioVideo;Network",
+      "icon": "build/icon.png",
+      "artifactName": "MeshTalk-${version}-${arch}.${ext}",
+      "synopsis": "LAN-only Wi-Fi walkie-talkie, chat, file transfer and calls",
+      "description": "MeshTalk connects devices on the same Wi-Fi network for push-to-talk audio, text chat, any-file transfer, broadcast messages, and local audio/video calls. No internet or accounts required."
+    }
+  },
+  "allowScripts": {
+    "electron@33.4.11": true,
+    "esbuild@0.25.12": true
+  }
+}

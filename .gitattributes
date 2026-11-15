@@ -1,0 +1,2 @@
+Apps/MeshTalk-1.0.0-x86_64.AppImage filter=lfs diff=lfs merge=lfs -text
+Apps/wifi-walkie-talkie.apk filter=lfs diff=lfs merge=lfs -text
